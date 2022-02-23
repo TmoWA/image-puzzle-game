@@ -1,0 +1,33 @@
+.root {
+    -fx-padding: 5 ;
+    cell-color: black;
+    cell-border-color: black ;
+}
+.grid {
+    /* Adds a black background and simulates lines between the image pieces, like a grid. */
+    -fx-background-color: cell-border-color, cell-color ;
+    -fx-background-insets: 0, 0 0 0 0 ;
+    -fx-padding: 0.5 ;
+    -fx-vgap: 2;
+    -fx-hgap: 2;
+    -fx-alignment: center;
+}
+
+.grid:complete {
+/* This is for when the game is completed. It just reassembles the picture then makes the background green. */
+	-fx-background-color: #0ffc03;
+	-fx-vgap: 0;
+    -fx-hgap: 0;
+}
+.image-view {
+	-fx-background-color: white;
+    -fx-background-insets: 0, 1 1 1 1;
+}
+.image-view:selected {
+/* Signals to the user that an image piece is selected */
+	-fx-scale-x: 0.8;
+	-fx-scale-y: 0.8;
+}
+.comboBoxes {
+	-fx-background-color: white;
+}

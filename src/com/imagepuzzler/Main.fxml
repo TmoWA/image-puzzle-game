@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import java.lang.String?>
+<?import javafx.collections.*?>
+
+<BorderPane fx:controller="com.imagepuzzler.Controller" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox styleClass="comboBoxes">
+            <ComboBox fx:id="imageComboBox" value="Select image..." onAction="#selectImage">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Castle Image"/>
+                        <String fx:value="Apple Image"/>
+                        <String fx:value="Mountain Image"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+            <ComboBox fx:id="difficultyComboBox" value="Select difficulty..." onAction="#selectDifficulty">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="9 Pieces"/>
+                        <String fx:value="16 Pieces"/>
+                        <String fx:value="32 Pieces"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+    </top>
+
+    <center>
+        <GridPane fx:id="gridPane" styleClass="grid"/>
+    </center>
+</BorderPane>
+
